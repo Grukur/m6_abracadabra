@@ -63,12 +63,13 @@ app.get('/', async (req, res) => {
 
 app.get('/abracadabra/conejo/:n', (req, res) => {
     let n = req.params.n
-    let numero = numberRandom()
+    let number = numberRandom()
     //res.send([n, numero])
-    n == numero ? res.redirect('/conejito.jpg') : res.redirect('/voldemort.jpg');
+    n == number ? res.redirect('/conejito.jpg') : res.redirect('/voldemort.jpg');
     
 })
 
+// ERROR ROUTES
 app.use('*', (req, res) => {
     res.status(404).send('<h1>Esta página no existe...</h1>');
 })
