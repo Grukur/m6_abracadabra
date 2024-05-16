@@ -37,7 +37,7 @@ app.use('/abracadabra/juego/:usuario', (req, res, next) => {
 /* 
 ROUTES
 */
-app.get('/abracadabra/:usuario', (req, res) => {
+app.get('/abracadabra/usuarios', (req, res) => {
     res.send({users})
 })
 
